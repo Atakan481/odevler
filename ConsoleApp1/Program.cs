@@ -1,4 +1,4 @@
-﻿int grade, count = 0, sum = 0;
+﻿/* int grade, count = 0, sum = 0;
 int highest = int.MinValue; 
 int lowest = int.MaxValue;  
 while (true)
@@ -30,4 +30,14 @@ if (count > 0)
 else
 {
     Console.WriteLine("Hiç geçerli not girilmedi.");
+}
+*/
+
+
+
+int n = int.Parse(Console.ReadLine());
+
+for (int i = 1; i <= 10; i++)
+{
+    Console.WriteLine(n + " x " + i + " = " + (n * i));
 }
