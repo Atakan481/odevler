@@ -1,26 +1,33 @@
-﻿Console.WriteLine("Hello C#");
+﻿int grade, count = 0, sum = 0;
+int highest = int.MinValue; 
+int lowest = int.MaxValue;  
+while (true)
+{
+    grade = int.Parse(Console.ReadLine());
 
-Console.WriteLine();
+    if (grade == -1)
+        break;
 
+    sum += grade;
+    count++;
 
+    if (grade > highest)
+        highest = grade;
 
-Console.WriteLine("Ad Soyad: Atakan Şahin");
-Console.WriteLine("Bölüm: Bilgisayar Mühendisliği");
-Console.WriteLine("Yıl: 2.Sınıf");
+    if (grade < lowest)
+        lowest = grade;
+}
 
-Console.WriteLine();
+Console.WriteLine("Count: " + count);
+Console.WriteLine("Sum: " + sum);
 
-
-
-Console.WriteLine("Güncel Tarih ve Saat:" + DateTime.Now);
-
-Console.WriteLine();
-
-
-
-Console.Write("Celcius değerini girin: ");
-string girdi = Console.ReadLine();
-double celcius = Convert.ToDouble(girdi);
-double fahrenheit = (celcius * 9 / 5) + 32;
-
-Console.WriteLine("Fahrenheit değeri: " + fahrenheit);
+if (count > 0)
+{
+    Console.WriteLine("Average: " + (double)sum / count);
+    Console.WriteLine("Highest: " + highest);
+    Console.WriteLine("Lowest: " + lowest);
+}
+else
+{
+    Console.WriteLine("Hiç geçerli not girilmedi.");
+}
